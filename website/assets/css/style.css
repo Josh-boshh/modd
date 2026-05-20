@@ -148,7 +148,7 @@ li { margin-bottom: .4em; }
 section.ink .eyebrow { color: var(--gold); }
 section.ink .eyebrow::before { background: var(--gold); }
 
-.section-head { max-width: 760px; margin-bottom: 56px; overflow: hidden; }
+.section-head { max-width: 760px; margin-bottom: 56px; overflow: visible; }
 .section-head h2 { margin-bottom: 18px; }
 .section-head p { color: var(--ink-3); font-size: 1.05rem; }
 .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
@@ -206,7 +206,7 @@ body::before, body::after {
   pointer-events: none;
 }
 body::before { top: 0; }
-body::after  { bottom: 0; }
+body::after  { display: none; }
 @media print { body::before, body::after { display: none; } }
 
 /* =============================================================================
@@ -331,7 +331,7 @@ body::after  { bottom: 0; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.18; }
 .brand-text .ministry {
   font-family: var(--font-serif);
-  font-size: 1.08rem; font-weight: 500;
+  font-size: 1.25rem; font-weight: 500;
   color: var(--ink); letter-spacing: -0.012em;
 }
 .brand-text .country {
@@ -436,14 +436,30 @@ body::after  { bottom: 0; }
 }
 .search-toggle:hover { background: var(--green); border-color: var(--green); color: #fff; }
 
+/* MOD logo — right end of navbar */
+.nav-mod-logo {
+  width: 44px; height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.92;
+  transition: opacity .2s ease;
+}
+.nav-mod-logo:hover { opacity: 1; }
+@media (max-width: 980px) { .nav-mod-logo { display: none; } }
+
 @media (max-width: 980px) {
-  .nav-inner { position: relative; }
+  .nav-inner {
+    position: relative;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .brand { flex: 1; min-width: 0; }
   .mobile-toggle {
     display: inline-flex; align-items: center; gap: 8px;
     background: var(--paper-2);
     border: 1px solid var(--line);
     padding: 10px 14px; border-radius: 999px;
-    min-width: 104px; justify-content: center;
+    min-width: 0; flex-shrink: 0; justify-content: center;
   }
   .menu {
     position: absolute; top: calc(100% + 10px); left: 0; right: 0;
@@ -702,6 +718,9 @@ body::after  { bottom: 0; }
 .leader-card {
   display: flex;
   flex-direction: column;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .leader-card-photo {
   position: relative;
@@ -1474,12 +1493,12 @@ section.ink > .container { position: relative; z-index: 1; }
 .section-head[data-num] > * { position: relative; z-index: 1; }
 section.ink .section-head[data-num]::before { color: rgba(184,146,60,0.10); }
 
-/* ── Refined eyebrow: tiny gold dot on the right ──────────────────────────*/
+/* ── Refined eyebrow: tiny red dot on the right (from MOD logo eagle) ─────*/
 .eyebrow::after {
   content: "";
   display: inline-block;
   width: 4px; height: 4px;
-  background: var(--gold);
+  background: var(--red);
   border-radius: 50%;
   margin-left: 12px;
   vertical-align: middle;
@@ -1705,7 +1724,7 @@ section.ink .eyebrow::after { background: var(--gold); }
   content: "";
   display: block;
   width: 64px; height: 2px;
-  background: var(--gold);
+  background: var(--red);
   margin: 22px 0 4px;
 }
 
@@ -1948,4 +1967,45 @@ section.ink::after {
 
   /* Ga1: gallery.html — figcaption hover-only is invisible on touch; always show on mobile */
   .gallery-grid figure figcaption { opacity: 1; }
+}
+
+/* =============================================================================
+   Mobile navbar refinements (max-width: 980px)
+   Placed last so these override all earlier brand-text rules.
+   ============================================================================= */
+@media (max-width: 980px) {
+
+  /* Container gutters */
+  .navbar .container { padding-left: 15px; padding-right: 15px; }
+
+  /* Nav inner vertical rhythm */
+  .nav-inner { padding: 20px 0; gap: 24px; }
+
+  /* Nudge brand right, tighten logo-to-text gap */
+  .brand { margin-left: 16px; gap: 8px; }
+
+  /* Logo: much smaller */
+  .brand-logo { width: 22px !important; height: 22px !important; }
+
+  /* Ministry name: much smaller */
+  .brand-text .ministry { font-size: 10px !important; line-height: 1.3; }
+
+  /* Country name: much smaller, forced single line */
+  .brand-text .country {
+    font-size: 7px !important;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 2px;
+    line-height: 1.2;
+    white-space: nowrap !important;
+  }
+
+  /* Button: nudge left from the right wall */
+  .mobile-toggle {
+    padding: 10px 14px;
+    min-height: 0;
+    margin-left: auto;
+    margin-right: 20px !important;
+  }
 }

@@ -136,6 +136,7 @@
           </button>
         </li>
       </ul>
+      <img src="assets/images/mod-logo.png" class="nav-mod-logo" alt="Federal Ministry of Defence logo" />
     </div>
   </nav>
 

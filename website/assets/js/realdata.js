@@ -14,12 +14,6 @@ window.MOD_DATA = {
       alt: "Nigerian Army soldiers on patrol vehicle in counter-terrorism operations",
     },
     {
-      img: "assets/images/hero/slide-1.jpg",
-      role: "Ship House, Abuja",
-      name: "Seat of Nigeria's defence policy — home of the Federal Ministry of Defence.",
-      alt: "Ship House — Federal Ministry of Defence headquarters, Abuja",
-    },
-    {
       img: "assets/images/hero/slide-2.jpg",
       role: "Nigerian Navy",
       name: "Maritime special forces securing Nigeria's territorial waters and the Gulf of Guinea.",
@@ -54,6 +48,12 @@ window.MOD_DATA = {
       role: "Nigerian Air Force",
       name: "Armed and airborne — Nigeria's air combat capability ready to defend sovereign skies.",
       alt: "Nigerian Air Force fighter jet in flight above clouds, fully armed",
+    },
+    {
+      img: "assets/images/hero/slide-1.jpg",
+      role: "Ship House, Abuja",
+      name: "Seat of Nigeria's defence policy — home of the Federal Ministry of Defence.",
+      alt: "Ship House — Federal Ministry of Defence headquarters, Abuja",
     },
   ],
 
