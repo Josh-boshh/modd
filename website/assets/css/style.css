@@ -1906,3 +1906,46 @@ section.ink::after {
   /* Brand: tighten further */
   .brand-text .ministry { font-size: .88rem; }
 }
+
+/* =============================================================================
+   Mobile — max-width: 768px — full site pass
+   ============================================================================= */
+@media (max-width: 768px) {
+
+  /* G1: iOS auto-zoom prevention — inputs below 16px trigger zoom on iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="search"],
+  select,
+  textarea { font-size: 16px; }
+
+  /* G2: Nav hamburger tap target */
+  .mobile-toggle { min-height: 44px; }
+
+  /* G3: Small button tap target — used on procurement downloads and map links */
+  .btn-sm { min-height: 44px; padding: 11px 18px; }
+
+  /* G4: btn-link tap target — min-height with flex alignment keeps visual unchanged */
+  .btn-link { min-height: 44px; display: inline-flex; align-items: center; }
+
+  /* G5: Page-hero h1 — reduce clamp floor so headings don't dominate small screens */
+  .page-hero h1 { font-size: clamp(1.75rem, 5vw, 2.2rem); }
+
+  /* G6: Newsletter form — stack input and button on narrow screens */
+  .newsletter-wrap { flex-wrap: wrap; }
+  .newsletter-wrap input { min-width: 0; }
+  .newsletter-wrap button { width: 100%; padding: 12px; }
+
+  /* S1/S2: structure.html — org tree padding and node min-width (override inline <style>) */
+  .org-tree { padding: 18px !important; }
+  .org-node { min-width: 0 !important; width: 100%; }
+
+  /* M1: military.html — comp-card 48px inline padding override */
+  .two-col .comp-card { padding: 24px !important; }
+
+  /* Ga1: gallery.html — figcaption hover-only is invisible on touch; always show on mobile */
+  .gallery-grid figure figcaption { opacity: 1; }
+}
