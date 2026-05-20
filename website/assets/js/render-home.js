@@ -95,9 +95,6 @@
     const nameEl = document.querySelector(".leader-text h2");
     if (nameEl && L.minister && L.minister.name) nameEl.textContent = L.minister.name;
 
-    const heroCap = document.getElementById("heroName");
-    if (heroCap && L.minister && L.minister.name) heroCap.textContent = L.minister.name;
-
     // Duo cards
     const duo = document.querySelectorAll(".duo .duo-card");
     if (duo && duo.length >= 2 && L.ministerOfState && L.permSec) {
