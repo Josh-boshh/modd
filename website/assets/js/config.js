@@ -22,13 +22,13 @@ window.MOD_CONFIG = {
   // ── Languages offered in the dropdown (label shown to users) ─────────────
   //   Add more by appending {code: "label"} — everything else is generic.
   LANGUAGES: {
-    "en":    "🇬🇧  English",
-    "ha":    "🇳🇬  Hausa",
-    "ig":    "🇳🇬  Igbo",
-    "yo":    "🇳🇬  Yoruba",
-    "fr":    "🇫🇷  Français",
-    "es":    "🇪🇸  Español",
-    "zh-CN": "🇨🇳  中文 (简体)",
+    "en":    "English",
+    "ha":    "Hausa",
+    "ig":    "Igbo",
+    "yo":    "Yoruba",
+    "fr":    "Français",
+    "es":    "Español",
+    "zh-CN": "中文 (简体)",
   },
 
   // ── Default language when nothing is saved in localStorage ───────────────

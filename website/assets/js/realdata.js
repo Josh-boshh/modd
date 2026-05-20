@@ -8,28 +8,52 @@ window.MOD_DATA = {
   // See website/assets/images/hero/README.txt for filename mapping.
   HERO_SLIDES: [
     {
+      img: "assets/images/hero/slide-8.jpg",
+      role: "Nigerian Army",
+      name: "Counter-terrorism operations — Nigerian soldiers engaged in active theatre operations.",
+      alt: "Nigerian Army soldiers on patrol vehicle in counter-terrorism operations",
+    },
+    {
       img: "assets/images/hero/slide-1.jpg",
       role: "Ship House, Abuja",
-      name: "The home of Nigeria's defence policy and administration.",
+      name: "Seat of Nigeria's defence policy — home of the Federal Ministry of Defence.",
       alt: "Ship House — Federal Ministry of Defence headquarters, Abuja",
     },
     {
       img: "assets/images/hero/slide-2.jpg",
-      role: "Nigerian Army",
-      name: "Discipline, ceremony and tradition — the Nigerian Army honour guard.",
-      alt: "Nigerian Army honour guard with ceremonial rifles",
+      role: "Nigerian Navy",
+      name: "Maritime special forces securing Nigeria's territorial waters and the Gulf of Guinea.",
+      alt: "Nigerian Navy special boat service operators on patrol in the Gulf of Guinea",
     },
     {
       img: "assets/images/hero/slide-3.jpg",
       role: "Nigerian Air Force",
-      name: "Air supremacy and tactical mobility — the Nigerian Air Force in action.",
-      alt: "Nigerian Air Force Mi-35 attack helicopter in flight",
+      name: "NAF 530 on deployment — projecting air power in defence of Nigeria's sovereign skies.",
+      alt: "Nigerian Air Force Mi-35 attack helicopter NAF 530 in flight",
     },
     {
       img: "assets/images/hero/slide-4.jpg",
-      role: "Nigerian Navy",
-      name: "Special boat operations across the Gulf of Guinea and Nigeria's territorial waters.",
-      alt: "Nigerian Navy special boat service on patrol",
+      role: "Nigerian Army",
+      name: "Precision and ceremony — the Nigerian Army honour guard stands ready in service of the nation.",
+      alt: "Nigerian Army honour guard inspection in full ceremonial uniform",
+    },
+    {
+      img: "assets/images/hero/slide-5.jpg",
+      role: "Nigerian Air Force",
+      name: "Strike aircraft lined up and ready — the Nigerian Air Force maintains constant operational readiness.",
+      alt: "Nigerian Air Force fighter jets taxiing in formation on the runway",
+    },
+    {
+      img: "assets/images/hero/slide-6.jpg",
+      role: "Nigerian Air Force",
+      name: "Fighter jets on the tarmac — air power standing by in the service of Nigeria's national security.",
+      alt: "Nigerian Air Force fighter jets lined up on the flight line with cockpits open",
+    },
+    {
+      img: "assets/images/hero/slide-7.jpg",
+      role: "Nigerian Air Force",
+      name: "Armed and airborne — Nigeria's air combat capability ready to defend sovereign skies.",
+      alt: "Nigerian Air Force fighter jet in flight above clouds, fully armed",
     },
   ],
 
@@ -114,17 +138,17 @@ window.MOD_DATA = {
     minister: {
       name: "General Christopher Gwabin Musa (rtd), OFR",
       title: "Honourable Minister of Defence",
-      photo: "assets/images/Headshots/General Christopher Gwabin Musa.jpeg",
+      photo: "assets/images/headshots/general-christopher-musa.jpeg",
     },
     ministerOfState: {
       name: "Dr. Bello Mohammed Matawalle, MON",
       title: "Honourable Minister of State for Defence",
-      photo: "assets/images/Headshots/Dr. Bello Mohammed Matawalle.jpg",
+      photo: "assets/images/headshots/dr-bello-matawalle.jpg",
     },
     permSec: {
       name: "Permanent Secretary",
       title: "Permanent Secretary, Federal Ministry of Defence",
-      photo: "assets/images/Headshots/Permanent Secretary.jpeg",
+      photo: "assets/images/headshots/permanent-secretary.jpeg",
     },
   },
 

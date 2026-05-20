@@ -162,7 +162,7 @@
     function goTo(i) { idx = (i + slides.length) % slides.length; update(); restart(); }
     function next() { goTo(idx + 1); }
     function prev() { goTo(idx - 1); }
-    function restart() { clearInterval(timer); timer = setInterval(next, 6000); }
+    function restart() { clearInterval(timer); timer = setInterval(next, 5000); }
 
     document.querySelector("[data-slider-prev]")?.addEventListener("click", prev);
     document.querySelector("[data-slider-next]")?.addEventListener("click", next);
