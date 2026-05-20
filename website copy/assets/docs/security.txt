@@ -1,0 +1,15 @@
+# Federal Ministry of Defence — Security disclosure policy
+# Per RFC 9116, served at /.well-known/security.txt
+
+Contact: mailto:security@defence.gov.ng
+Contact: https://defence.gov.ng/contact.html
+Expires: 2027-05-15T00:00:00.000Z
+Preferred-Languages: en, ha
+Canonical: https://defence.gov.ng/.well-known/security.txt
+Policy: https://defence.gov.ng/accessibility.html
+
+# Responsible disclosure
+# If you find a vulnerability in this website or any related public-facing
+# service of the Federal Ministry of Defence, please report it via the
+# contact addresses above. Do not publicly disclose the issue until we
+# have had reasonable opportunity to investigate and remediate.

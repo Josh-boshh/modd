@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Coat of Arms of the Federal Republic of Nigeria">
+  <defs>
+    <linearGradient id="shieldG" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0E1A14"/>
+      <stop offset="1" stop-color="#1a2820"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#D9B450"/>
+      <stop offset="1" stop-color="#A37C2A"/>
+    </linearGradient>
+  </defs>
+  <!-- shield -->
+  <path d="M60 16 C 38 22, 26 36, 26 56 C 26 80, 40 96, 60 108 C 80 96, 94 80, 94 56 C 94 36, 82 22, 60 16 Z" fill="url(#shieldG)" stroke="url(#goldG)" stroke-width="2"/>
+  <!-- Y of the rivers -->
+  <path d="M60 38 L60 64 M60 64 L46 86 M60 64 L74 86" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- eagle -->
+  <path d="M48 26 L60 18 L72 26 L66 30 L60 27 L54 30 Z" fill="url(#goldG)"/>
+  <circle cx="60" cy="22" r="2" fill="#fff"/>
+</svg>
