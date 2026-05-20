@@ -1379,10 +1379,12 @@ textarea { min-height: 140px; resize: vertical; }
 }
 @media (max-width: 720px) {
   .hero-caption.hero-caption-prominent {
-    left: 22px; right: 22px; bottom: 80px;
-    max-width: none; padding: 12px 0 12px 16px;
+    display: block;
+    left: 22px; right: 22px; bottom: 76px;
+    max-width: none; padding: 10px 0 10px 14px;
   }
-  .hero-caption.hero-caption-prominent .name { font-size: 1.1rem; }
+  .hero-caption.hero-caption-prominent .role { font-size: .6rem; }
+  .hero-caption.hero-caption-prominent .name { font-size: 1rem; line-height: 1.35; }
 }
 
 /* =============================================================================
@@ -1819,4 +1821,88 @@ section.ink::after {
     background-size: 160px 160px, 420px 420px !important;
     opacity: .5 !important;
   }
+}
+
+/* =============================================================================
+   MOBILE — comprehensive 390–720px optimisations
+   ============================================================================= */
+@media (max-width: 720px) {
+
+  /* Section vertical rhythm — 96px is excessive on small screens */
+  section { padding: 56px 0; }
+  section.tight { padding: 32px 0; }
+  section.tight h1 { font-size: clamp(1.65rem, 6vw, 2.2rem); }
+  .section-head { margin-bottom: 36px; }
+
+  /* Hero — override .hero.hero-clean two-class specificity */
+  .hero.hero-clean {
+    height: 65vh;
+    min-height: 440px;
+    max-height: 600px;
+  }
+
+  /* Slider dots — wider visible bar + transparent padding for touch area */
+  .slider-dots { bottom: 20px; gap: 8px; }
+  .slider-dots button {
+    width: 28px; height: 4px;
+    padding: 10px 0;
+    background-clip: content-box;
+  }
+  .slider-dots button.active { width: 40px; }
+
+  /* Headings — clamp floors too large at 390px */
+  h1 { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+  h2 { font-size: clamp(1.4rem, 5vw, 1.9rem); }
+
+  /* Navbar brand — prevent overflow on narrow screens */
+  .brand { gap: 12px; }
+  .brand-logo { width: 44px; height: 44px; }
+  .brand-text .ministry { font-size: .95rem; }
+  .brand-text .country { font-size: .62rem; letter-spacing: .14em; }
+  .nav-inner { padding: 14px 0; }
+
+  /* Milestones — reduce cell bulk */
+  .milestone { padding: 24px 16px; }
+  .milestone .num { font-size: 2.2rem; }
+  .milestone .label { font-size: .72rem; }
+
+  /* Leadership photos — cap portrait height */
+  .leader-card-photo { max-height: 300px; }
+
+  /* News — scale headline and metadata */
+  .news-feature h3 { font-size: 1.2rem; }
+  .news-feature .date,
+  .news-side .date,
+  .news-card .date { font-size: .72rem; }
+
+  /* Commitment cards — reduce inner padding */
+  .commitment { padding: 24px 20px; }
+
+  /* Cards — reduce padding */
+  .card { padding: 22px 18px; }
+
+  /* btn-link — bigger touch target */
+  .btn-link { padding: 6px 0; }
+
+  /* Footer — reduce vertical bulk */
+  .footer { padding: 48px 0 36px; }
+  .footer-grid { padding-bottom: 36px; gap: 32px; }
+  .footer h4 { margin-bottom: 14px; }
+
+  /* Fixed FABs — bring in from edges to match container padding */
+  .chatbot-launcher { bottom: 22px; right: 20px; }
+  .a11y-fab { bottom: 22px; left: 20px; }
+  .chatbot-panel { right: 12px; bottom: 88px; }
+  .a11y-panel { left: 12px; }
+}
+
+/* Extra-small — below 480px */
+@media (max-width: 480px) {
+  /* Milestones: single column so numbers don't cramp */
+  .milestones { grid-template-columns: 1fr; }
+  .milestone { border-right: 0 !important; border-bottom: 1px solid var(--line); }
+  .milestone:last-child { border-bottom: 0; }
+
+  /* Brand: tighten further */
+  .brand-text .ministry { font-size: .88rem; }
 }
